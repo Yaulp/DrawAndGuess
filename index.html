@@ -1,0 +1,52 @@
+<html lang="fr">
+<head>
+	<meta charset="utf-8"/>
+
+	<title>Draw and guess</title>
+	<meta name="description" content="Draw and guess"/>
+	<meta name="author" content="Yaulp"/>
+	
+	<link rel="stylesheet" type="text/css" href="Index.css?v=13"/>
+	<link rel="stylesheet" type="text/css" href="Range.css"/>
+	
+	<script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+</head>
+
+<body>
+	<div id="ChatText"> </div>
+	<input id="ChatMessage" type="text"/>
+	<canvas id="forceSize" width="1000" height="710"> </canvas> 
+	<div class="ColorCtn">
+		<canvas id="cColor" width="1000" height="80"> </canvas>
+	</div>
+	<canvas id="cDraw" width="1000" height="600"> </canvas>
+	<canvas id="cTools" width="1000" height="600"> </canvas>
+	<img id="Brush" type="button" onclick="Draw.setTool(TOOL.BRUSH)" src="Brush.png"/>
+	<img id="Bucket" type="button" onclick="Draw.setTool(TOOL.BUCKET)" src="PaintBucket.png"/>
+	<img id="Trash" type="button" onclick="erase()" src="Trash.png"/>
+	<input id="DrawSize" type="range" class="slider" oninput="Draw.setRadius(this.value)" name="points" min="1" max="38" step="1"/>
+	
+	<input type="button" value="Fullscreen" onclick="toggleFullScreen()" style="position:absolute; left:10px; top :10px"/>
+	<input type="button" value="Stream" onclick="Client.isServer = true" style="position:absolute; left:10px; top :30px"/>
+	
+	
+	<div id="Words">
+		<input id="Word1" type="button" value="Word1" /><input id="Word2" type="button" value="Word2" /><input id="Word3" type="button" value="Word3" />
+	</div>
+	
+
+	
+	<script src="Client/Game.js?v=1"></script>
+	<script src="Client/Client.js?v=3"></script>
+	
+	<script src="PaintApi/Canvas.js?v=4"></script>
+	<script src="PaintApi/ToolsCanvas.js?v=1"></script>
+	<script src="PaintApi/DrawCanvas.js?v=4"></script>
+	<script src="PaintApi/MousePos.js?v=1"></script>
+	<script src="PaintApi/ColorCanvas.js?v=3"></script>
+	<script src="PaintApi/Main.js?v=7"></script>
+  
+</body>
+</html>

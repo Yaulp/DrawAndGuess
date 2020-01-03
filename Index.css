@@ -1,0 +1,81 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+canvas, video, #Words {
+	position:absolute;
+	left:23%;
+	top:2%;
+	width:65%;
+}
+body {
+	background:silver;
+}
+img {
+	cursor:pointer;
+	height:10%;
+	left:89%;
+}
+#cTools {
+	cursor:none;
+    border:1px solid rgb(100,100,100);
+}
+#ChatText {
+	position:absolute;
+	background-color:white;
+	height:89%;
+	left:2%;
+	top:4%;
+	width:20%;
+}
+#ChatMessage {
+	position:absolute;
+	height:5%;
+	left:2%;
+	top:93%;
+	width:20%;
+}
+#forceSize {
+	position:absolute;
+	border : none;
+}
+.ColorCtn {
+	position:fixed;
+	bottom:2%;
+	left:23%;
+	width:100%;
+}
+#cColor {
+	cursor:pointer;
+	position:static;
+}
+#Bucket {
+	position:absolute;
+	bottom : 50%;
+}
+#Brush {
+	position:absolute;
+	bottom:35%;
+}
+#Trash {
+	position:absolute;
+	top:5%;
+}
+#DrawSize {
+	transform: rotate(-90deg);
+	width:12%;
+	position:absolute;
+	bottom:12%;
+	left:86%;
+}
+#Words {
+	display:none;
+	top:27%;
+}
+#Word1, #Word2, #Word3 {
+	width:31.33%;
+	margin:1%;
+	padding:1%;
+	font-size: 125%;
+}
